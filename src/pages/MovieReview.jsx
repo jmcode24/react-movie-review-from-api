@@ -71,9 +71,9 @@ function Reviews() {
 
         {!loading ? (
           reviews.map((review, index) => (
-            <Container key={index}>
+            <Container className='bg-light' key={index}>
               <Row>
-                <Col sm={4}>
+                <Col className='mt-3' sm={4}>
                   {review?.multimedia?.src ? (
                     <img
                       className="img-fluid mb-3"
@@ -88,26 +88,26 @@ function Reviews() {
                     />
                   )}
                 </Col>
-                <Col sm={8}>
+                <Col className='mt-3' sm={8}>
                   <h2 className="text-danger mb-3">
-                    Title: <span className="text-white">{review.display_title}</span>
+                    Title: <span className="text-dark">{review.display_title}</span>
                   </h2>
                   <h5 className="text-primary mb-5">
                     Headline:{" "}
-                    <span className="text-white">{review.headline}</span>
+                    <span className="text-dark">{review.headline}</span>
                   </h5>
                   <div className="d-flex justify-content-around">
                     <p className="text-muted">
-                      Byline: <span className="text-white">{review.byline}</span>
+                      Byline: <span className="text-dark">{review.byline}</span>
                     </p>
                     <p className="text-muted">
                       Critic Pick:{" "}
-                      <span className="text-white">{review.critics_pick}</span>
+                      <span className="text-dark">{review.critics_pick}</span>
                     </p>
                   </div>
                 </Col>
               </Row>
-              <hr style={{height: "2px", backgroundColor: "#FFFF00", border: "none"}} />
+              <hr />
             </Container>
           ))
         ) : (
